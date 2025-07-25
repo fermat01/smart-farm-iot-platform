@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package smartfarm;
 
-// Specify Go package path matching sensor.proto to keep pb package consistent
+
 option go_package = "github.com/fermat01/smart-farm-iot-platform/pb;pb";
 
 // Import sensor.proto to reuse Ack message
@@ -17,4 +17,4 @@ message PumpCommand {
   string sensor_id = 2;
 }
 
-// No Ack message here as it is imported from sensor.proto
+

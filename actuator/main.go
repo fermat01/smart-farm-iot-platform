@@ -5,7 +5,7 @@ import (
     "log"
     "net"
 
-    pb "github.com/fermat01/smart-farm-iot-platform/pb" // Update with your generated proto path
+    pb "github.com/fermat01/smart-farm-iot-platform/pb"
     "google.golang.org/grpc"
 
     "github.com/prometheus/client_golang/prometheus"
