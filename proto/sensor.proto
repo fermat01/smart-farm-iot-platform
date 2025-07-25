@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package smartfarm;
+
+// Specify Go package path according to your repo/module
+option go_package = "github.com/fermat01/smart-farm-iot-platform/pb;pb";
+
+// SensorService streams sensor readings
+service SensorService {
+  rpc StreamSensorData(stream SensorReading) returns (Ack) {}
+}
+
+// SensorReading message with at least 7 sensor fields
+message SensorReading {
+  string sensor_id = 1;
+  string type = 2;         // e.g., "soil", "weather", "tank", "well"
+  string timestamp = 3;
+
+  double soil_moisture = 4;
+  double soil_temperature = 5;
+  double air_temperature = 6;
+  double humidity = 7;
+  double water_tank_level = 8;
+  double well_depth = 9;
+  double pump_flow_rate = 10;
+}
+
+// Ack message shared across services
+message Ack {
+  string message = 1;
+}

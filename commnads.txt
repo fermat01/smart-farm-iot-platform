@@ -1,0 +1,17 @@
+##run in root project directory
+
+protoc --proto_path=proto \
+  --go_out=pb --go_opt=paths=source_relative \
+  --go-grpc_out=pb --go-grpc_opt=paths=source_relative \
+  proto/sensor.proto proto/actuator.proto
+
+
+
+
+pip install -r requirements.txt
+
+
+
+github repo will be available at:
+
+ github.com/fermat01/smart-farm-iot-platform     
