@@ -8,6 +8,7 @@ require (
 )
 
 require (
+	github.com/fermat01/smart-farm-iot-platform/pb v0.0.0-20250725113624-40d14b0278cf
 	golang.org/x/net v0.40.0 // indirect
 	golang.org/x/sys v0.33.0 // indirect
 	golang.org/x/text v0.25.0 // indirect
